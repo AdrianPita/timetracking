@@ -3,5 +3,15 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#Mayor.create(name: 'Emanuel', city: cities.first)
+
+class String
+	def self.foo
+	'a'*10
+	end
+end
+
+6.times do |i|
+	Project.create name: "Ironhack #{i}", description: String.foo
+end

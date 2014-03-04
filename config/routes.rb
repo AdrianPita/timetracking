@@ -4,6 +4,9 @@ Timetracking::Application.routes.draw do
 
   get '/contact' => 'site#contact'
 
+  get '/projects' => 'projects#index' 
+
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

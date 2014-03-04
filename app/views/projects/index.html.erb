@@ -1,0 +1,16 @@
+
+<body>
+<header>List of Fuck*** Projects</header>
+	<ul>
+		<% @projects.each do |project| %>
+
+			<% if project.description.blank? %>
+			<li><%= project.name %> 
+			<% else %>		
+			<li><%= project.name %>	- <%= project.description %></li>
+			<% end %>
+
+		<% end %>
+	</ul>
+<footer>Created by Mr. Pita           2014</footer>
+</body>

@@ -19,7 +19,7 @@ project	= Project.create name: "Ironhack #{i}",
 #5.times do |j|
 #project.entries.create hour: 0, minutes: j*5 
 project.entries.create hours: 0, minutes: 45, date: Date.new(2014, 05, i + 1)
-#end
+#end 
 end
 
 

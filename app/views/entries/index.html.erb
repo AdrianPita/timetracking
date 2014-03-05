@@ -1,3 +1,4 @@
+
 <h1><%= @projects.name %></h1> 
 	<ul> 
 	<% @entries.each do |entry| %> 
@@ -6,5 +7,6 @@
 			<%= entry.minutes %> m - 
 			<%= entry.date %> 
 		</li> 
-	<% end %> 
+		<% end %> 
 	</ul>
+	<p><%= pluralize(@projects.total_hours_in_month(Date.today.month, Date.today.year), 'hour', 'hours') %></p>

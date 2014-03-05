@@ -3,13 +3,11 @@
 <header>Shit I Gotta Fuck*** Get Done </header>
 	<ul>
 		<% @projects.each do |project| %>
-
-			<% if project.description.blank? %>
-			<li><%= project.name %> 
-			<% else %>		
-			<li><%= project.name %>	- <%= project.description %></li>
+		<li><%= link_to(project.name, project_entries_path(project)) %>
+			<% if project.description.present? %>	
+			- <%= project.description %>
 			<% end %>
-
+		</li>
 		<% end %>
 	</ul>
 <footer>Created by Mr. Pita </footer>

@@ -13,5 +13,15 @@ class String
 end
 
 6.times do |i|
-	Project.create name: "Ironhack #{i}", description: String.foo
+project	= Project.create name: "Ironhack #{i}", 
+						 description: String.foo
+
+#5.times do |j|
+#project.entries.create hour: 0, minutes: j*5 
+project.entries.create hours: 0, minutes: 45, date: Date.new(2014, 05, i + 1)
+#end
 end
+
+
+
+
